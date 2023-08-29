@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryColorDark"
+    android:padding="20dp"
+    tools:context=".Status">
+
+    <RelativeLayout
+        android:id="@+id/rev_add_pic"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+
+        android:background="@drawable/round_rev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/add_pictcher"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/camera"
+            app:tint="@color/icon_color"
+            android:padding="5dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rev_input"
+        android:layout_below="@id/rev_add_pic"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/lin_name"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/name"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:theme="@style/CustomEditText"
+                android:hint="@string/enter_your_name"
+                app:hintTextColor="@color/white"
+                android:textColorHint="@color/gray"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/white"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:background="@color/icon_color"
+                android:layout_marginLeft="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lin_status"
+            android:layout_below="@id/lin_name"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/status"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:theme="@style/CustomEditText"
+                android:hint="@string/enter_your_status"
+                app:hintTextColor="@color/white"
+                android:textColorHint="@color/gray"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/white"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:background="@color/icon_color"
+                android:layout_marginLeft="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_finish"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/btn_round"
+        android:backgroundTint="@color/white"
+        android:textAllCaps="false"
+        android:elevation="60dp"
+        android:text="@string/finish"
+        android:textColor="@color/icon_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ProgressBar
+        android:id="@+id/prog"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:visibility="gone"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/icon_color" />
+</RelativeLayout>

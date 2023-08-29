@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/primaryColor"
+    tools:context=".VerifyPhoneNumber">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:background="@color/primaryColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/your_number_is_being_verified"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/txt"
+        android:paddingHorizontal="35dp"
+        android:layout_below="@id/toolBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:text="@string/waiting_for_automatic_detection_of_a_text_message_sent_to_me" />
+
+    <LinearLayout
+        android:id="@+id/n"
+        android:layout_below="@id/txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/numTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_marginRight="10dp"
+            android:text="01014890911" />
+
+        <TextView
+            android:id="@+id/editNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textColor="@color/icon_color"
+            android:text="@string/modify_the_number" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/num"
+        android:layout_below="@id/n"
+        android:layout_marginTop="30dp"
+        android:paddingHorizontal="35dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/codeOne"
+                android:layout_gravity="center_horizontal"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                android:backgroundTint="@android:color/transparent"
+                android:theme="@style/CustomEditText"
+                app:hintEnabled="false"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:backgroundTint="@android:color/transparent"
+                    android:textColor="@color/white"
+                    android:hint="@string/hint_code"
+                    android:textColorHint="@color/icon_color"
+                    android:inputType="phone"
+                    android:maxLength="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/codeTwo"
+                android:layout_gravity="center_horizontal"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                android:backgroundTint="@android:color/transparent"
+                android:theme="@style/CustomEditText"
+                app:hintEnabled="false"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:backgroundTint="@android:color/transparent"
+                    android:textColor="@color/white"
+                    android:inputType="phone"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:maxLength="1"
+                    android:hint="@string/hint_code"
+                    android:textColorHint="@color/icon_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/codeThree"
+                android:layout_gravity="center_horizontal"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                android:backgroundTint="@android:color/transparent"
+                android:theme="@style/CustomEditText"
+                app:hintEnabled="false"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:backgroundTint="@android:color/transparent"
+                    android:textColor="@color/white"
+                    android:inputType="phone"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/hint_code"
+                    android:textColorHint="@color/icon_color"
+                    android:maxLength="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/codeFour"
+                android:layout_gravity="center_horizontal"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                android:backgroundTint="@android:color/transparent"
+                android:theme="@style/CustomEditText"
+                app:hintEnabled="false"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:backgroundTint="@android:color/transparent"
+                    android:textColor="@color/white"
+                    android:inputType="phone"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/hint_code"
+                    android:textColorHint="@color/icon_color"
+                    android:maxLength="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/codeFive"
+                android:layout_gravity="center_horizontal"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                android:backgroundTint="@android:color/transparent"
+                android:theme="@style/CustomEditText"
+                app:hintEnabled="false"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:backgroundTint="@android:color/transparent"
+                    android:textColor="@color/white"
+                    android:inputType="phone"
+                    android:hint="@string/hint_code"
+                    android:textColorHint="@color/icon_color"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:maxLength="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/codeSix"
+                android:layout_gravity="center_horizontal"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                android:backgroundTint="@android:color/transparent"
+                android:theme="@style/CustomEditText"
+                app:hintEnabled="false"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:backgroundTint="@android:color/transparent"
+                    android:textColor="@color/white"
+                    android:inputType="phone"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/hint_code"
+                    android:textColorHint="@color/icon_color"
+                    android:maxLength="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:background="@color/icon_color"
+            android:layout_width="250dp"
+            android:layout_height="1dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/num"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/resendOtp"
+            android:text="@string/resend_code_in"
+            android:textColor="@color/white"
+            android:background="@android:color/transparent"
+            app:background="@android:color/transparent"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/sec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="30 sec" />
+    </LinearLayout>
+</RelativeLayout>

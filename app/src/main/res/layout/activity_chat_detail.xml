@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryColorDark"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ChatDetailActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBarChatDetails"
+        android:background="@color/primaryColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/back"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@drawable/arrow_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/person"
+                    android:layout_marginLeft="5dp"
+                    android:padding="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/user_name"
+                    android:text="@string/user_name"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/white"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/user_online"
+                    android:text="@string/user_online"
+                    android:visibility="gone"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/white"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/user_text"
+                    android:text="@string/typing"
+                    android:layout_marginLeft="10dp"
+                    android:visibility="gone"
+                    android:textColor="@color/white"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="end"
+                android:layout_marginRight="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/menu"
+                    android:src="@drawable/menu"
+                    android:layout_width="24dp"
+                    android:layout_height="match_parent"
+                    app:tint="@color/white"
+                    android:importantForAccessibility="no" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_chat_message"
+        android:background="@color/primaryColorDark"
+        android:paddingTop="10dp"
+        android:paddingHorizontal="10dp"
+        android:layout_above="@id/sendMessage"
+        android:paddingBottom="10dp"
+        android:layout_below="@id/toolBarChatDetails"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_alignBottom="@id/recycler_view_chat_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.kalymni.WaveFormView
+            android:id="@+id/waveFromView"
+            android:layout_width="match_parent"
+            android:layout_height="100px" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sendMessage"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="15dp"
+        android:paddingBottom="15dp"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/cancel_voic"
+                android:background="@drawable/bg_text_input"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:text="@string/cancel"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/txt_timer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="20dp"
+                    android:text="0:00"
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txt_message"
+                app:hintEnabled="false"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_gravity="bottom"
+                app:boxCornerRadiusBottomEnd="30dp"
+                app:boxCornerRadiusBottomStart="30dp"
+                app:boxCornerRadiusTopEnd="30dp"
+                app:boxCornerRadiusTopStart="30dp"
+                app:startIconDrawable="@drawable/camera"
+                app:startIconTint="@color/icon_color"
+                app:endIconCheckable="true"
+                app:startIconCheckable="true"
+                android:theme="@style/CustomEditText2"
+                android:background="@android:color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:hint="@string/post"
+                    android:textColorHint="#535353"
+                    android:textColor="@color/white"
+                    android:background="@drawable/bg_text_input"
+                    android:textAlignment="center"
+                    android:maxHeight="150dp"
+                    android:scrollbars="vertical"
+                    android:scrollbarStyle="insideInset"
+                    android:verticalScrollbarPosition="right"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_gravity="bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/voic"
+                android:src="@drawable/mic"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/bg_btn_mic"
+                android:layout_width="56dp"
+                android:layout_height="56dp" />
+
+            <ImageButton
+                android:id="@+id/send"
+                android:src="@drawable/send"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/bg_btn_mic"
+                android:visibility="gone"
+                android:layout_width="56dp"
+                android:layout_height="56dp" />
+        </FrameLayout>
+    </LinearLayout>
+</RelativeLayout>

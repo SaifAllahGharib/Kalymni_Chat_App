@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_marginTop="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:layout_marginLeft="5dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image_simple_all_user"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/person" />
+
+        <RelativeLayout
+            android:id="@+id/check"
+            android:padding="5dp"
+            android:layout_gravity="end|bottom"
+            android:background="@drawable/round_check"
+            android:visibility="gone"
+            android:elevation="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_centerInParent="true"
+                android:src="@drawable/check"
+                android:elevation="12dp"
+                android:layout_width="15dp"
+                android:layout_height="15dp" />
+        </RelativeLayout>
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/name_of_all_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:gravity="start"
+            android:layout_gravity="start"
+            android:textSize="18sp"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/news_of_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="3dp"
+            android:textSize="11sp"
+            android:textColor="@color/white"
+            android:gravity="start" />
+    </LinearLayout>
+</LinearLayout>

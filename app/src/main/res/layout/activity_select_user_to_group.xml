@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryColorDark"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SelectUserToGroup">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBarGroup"
+        android:background="@color/primaryColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/back_new_group"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@drawable/arrow_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="@string/new_group"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/white"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:text="@string/add_participants"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/white"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="end"
+                android:layout_marginRight="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/search"
+                    android:src="@drawable/search"
+                    android:layout_width="24dp"
+                    android:layout_height="match_parent"
+                    app:tint="@color/white"
+                    android:importantForAccessibility="no" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/all_users_to_group"
+        android:paddingHorizontal="10dp"
+        android:paddingBottom="10dp"
+        android:layout_below="@id/toolBarGroup"
+        android:visibility="gone"
+        android:background="@color/primaryColorDark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_user_selected"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/hr"
+        android:layout_below="@id/all_users_to_group"
+        android:visibility="gone"
+        android:background="#36EBEBEB"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_group"
+        android:padding="2dp"
+        android:background="@color/primaryColorDark"
+        android:layout_below="@id/hr"
+        tools:listitem="@layout/sample_show_users"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_go_to_name_group"
+        android:src="@drawable/arrow_forward"
+        android:layout_alignParentBottom="true"
+        android:tint="@color/icon_color"
+        android:elevation="12dp"
+        app:elevation="12dp"
+        app:tint="@color/icon_color"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/bg_btn_mic"
+        android:backgroundTint="@color/primaryColor"
+        app:backgroundTint="@null"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp" />
+</RelativeLayout>

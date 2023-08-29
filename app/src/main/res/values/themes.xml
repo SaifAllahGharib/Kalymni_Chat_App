@@ -1,0 +1,15 @@
+<resources>
+
+    <style name="Theme.ChatApp" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryColorDark</item>
+    </style>
+
+    <style name="CustomEditText" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="colorPrimary">@color/icon_color</item>
+    </style>
+
+    <style name="CustomEditText2" parent="">
+        <item name="colorPrimary">@color/icon_color</item>
+    </style>
+</resources>

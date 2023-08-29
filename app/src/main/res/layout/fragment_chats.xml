@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryColorDark"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.ChatsFragment">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatRecycle"
+        android:background="@color/primaryColorDark"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_go_to_all_users"
+        android:src="@drawable/message"
+        android:layout_alignParentBottom="true"
+        android:tint="@color/icon_color"
+        android:elevation="12dp"
+        app:elevation="12dp"
+        app:tint="@color/icon_color"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/bg_btn_mic"
+        android:backgroundTint="@color/primaryColor"
+        app:backgroundTint="@null"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp" />
+</RelativeLayout>

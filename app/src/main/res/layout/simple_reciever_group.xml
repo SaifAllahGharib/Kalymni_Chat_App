@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="start"
+    android:maxWidth="240dp"
+    android:layout_marginBottom="10dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image_msg_receiver_group"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="-5dp"
+        android:layout_marginLeft="-2.5dp"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/person"
+        android:padding="5dp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/rev_receiver_msg"
+        android:background="@drawable/bg_reciver"
+        android:layout_marginLeft="30dp"
+        android:layout_alignParentStart="true"
+        android:paddingLeft="15dp"
+        android:paddingRight="12dp"
+        android:paddingVertical="5dp"
+        android:maxWidth="240dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/nameOfUser_receiver_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="240dp"
+            android:minWidth="70dp"
+            android:paddingRight="0dp"
+            android:gravity="left"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@+id/msg_receiver_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:paddingRight="0dp"
+            android:gravity="left"
+            android:maxWidth="240dp"
+            android:minWidth="70dp"
+            android:text="س" />
+
+        <TextView
+            android:id="@+id/time_msg_receiver_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:layout_gravity="end"
+            android:text="@string/time_of_msg" />
+    </LinearLayout>
+</RelativeLayout>

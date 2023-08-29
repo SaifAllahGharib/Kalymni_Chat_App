@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryColorDark"
+    tools:context=".AllUsers">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBarAllUsers"
+        android:background="@color/primaryColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/back_all_users"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@drawable/arrow_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="@string/select_the_contact"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/white"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/num_of_contact"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/white"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/serch"
+                android:orientation="horizontal"
+                android:gravity="end"
+                android:layout_marginRight="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/search"
+                    android:src="@drawable/search"
+                    android:layout_width="24dp"
+                    android:layout_height="match_parent"
+                    app:tint="@color/white"
+                    android:importantForAccessibility="no" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewAllUsers"
+        android:layout_below="@id/toolBarAllUsers"
+        android:paddingRight="10dp"
+        android:paddingLeft="2dp"
+        android:paddingBottom="20dp"
+        android:background="@color/primaryColorDark"
+        tools:listitem="@layout/sample_all_users"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

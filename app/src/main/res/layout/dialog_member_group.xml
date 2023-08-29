@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@color/primaryColor"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/addAdmin"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:paddingHorizontal="15dp"
+        android:paddingTop="15dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/create_admin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/leaveFromGroup"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:paddingHorizontal="15dp"
+        android:paddingBottom="15dp"
+        android:text="@string/leave_from_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "957299592970",
+    "project_id": "kalymni-99e8c",
+    "storage_bucket": "kalymni-99e8c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:957299592970:android:42e7564eb7c7e2ac99f4f3",
+        "android_client_info": {
+          "package_name": "com.kalymni"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "957299592970-mc4u0ilbdendinkef2oa1ficrmj1f3vm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUMNHp4cwmP70y1cFDQEa-7RuLj2rPdwI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "957299592970-mc4u0ilbdendinkef2oa1ficrmj1f3vm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
